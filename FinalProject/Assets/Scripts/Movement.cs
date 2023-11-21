@@ -14,7 +14,6 @@ public class Movement : MonoBehaviour
     Rigidbody rb;
     AudioSource rocketSound;
     AudioSource backgroundMusic;
-    bool isAlive;
 
     // Start is called before the first frame update
     void Start()
@@ -44,22 +43,11 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {   
-            
-            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            if (!rocketSound.isPlaying)
-            {
-                rocketSound.PlayOneShot(mainEngine);
-            }
-            if (!mainBoosterParticles.isPlaying)
-            {
-                mainBoosterParticles.Play();
-            }
-            
+           StartThrusting();
         }
         else
         {
-            rocketSound.Stop();
-            mainBoosterParticles.Stop();
+            StopThrusting();
         }
     }
 
@@ -68,27 +56,60 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotationThrust);
+           RotateLeft();
+           
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            RotateRight();
+        }
+        else 
+        {
+           StopRotating();
+        }
+    }
 
+    void StartThrusting()
+    {
+         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+            if (!rocketSound.isPlaying)
+            {
+                rocketSound.PlayOneShot(mainEngine);
+            }
+            if (!mainBoosterParticles.isPlaying)
+            {
+                mainBoosterParticles.Play();
+            }
+    }
+
+     void StopThrusting()
+    {
+        rocketSound.Stop();
+        mainBoosterParticles.Stop();
+    }
+
+    void RotateLeft()
+    {
+         ApplyRotation(rotationThrust);
             if (!rightBoosterParticles.isPlaying)
             {
                 rightBoosterParticles.Play();
             }
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            ApplyRotation(-rotationThrust);
+    }
+
+    void RotateRight()
+    {
+        ApplyRotation(-rotationThrust);
             if (!leftBoosterParticles.isPlaying)
             {
                 leftBoosterParticles.Play();
             }
-        }
-        else 
-        {
-            rightBoosterParticles.Stop();
-            leftBoosterParticles.Stop();
-        }
+    }
 
+    void StopRotating()
+    {
+        rightBoosterParticles.Stop();
+        leftBoosterParticles.Stop();
     }
 
     // Method for rotation than ProcessRotation is using for turning our rocket
