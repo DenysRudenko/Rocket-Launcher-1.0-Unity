@@ -20,15 +20,34 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
     bool isTransitioning = false;
-
-
+    bool collisionDisabled = false;
     void Start(){
         audioSource = GetComponent<AudioSource>();
         UpdateLifeText();
     }
+
+    void Update() 
+    {
+        RespondToDebugKeys();
+    }
+
+    // Cheat code method to load next level pressing L button
+    // and pressing C button to turn off collision = GodMode
+    void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisabled = !collisionDisabled; // toggle collison
+        }
+    }
+
   void OnCollisionEnter(Collision other)
     {
-        if (isTransitioning)
+        if (isTransitioning || collisionDisabled)
         {
             return;
         }
