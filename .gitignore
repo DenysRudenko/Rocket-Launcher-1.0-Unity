@@ -9,7 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-Assets/Real Stars Skybox/StarSkybox04/CubemapStars.cubemap
+/[Aa]ssets/Real Stars Skybox/StarSkybox04/CubemapStars.cubemap
 node_modules
 package-lock.json
 package.json
