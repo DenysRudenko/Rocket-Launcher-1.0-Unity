@@ -9,21 +9,20 @@ public class CollisionHandler : MonoBehaviour
 {   
     [SerializeField] float levelLoadDeley = 2f;
     [SerializeField] float objectDestroyDeley = 2f;
-    int life = 100;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
 
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem crashParticles;
 
-    public Canvas canvas;
-
+    public Health healthScript;
+    public Fuel fuelScript;
+    public CoinSuccess coinScript;
     AudioSource audioSource;
     bool isTransitioning = false;
     bool collisionDisabled = false;
     void Start(){
         audioSource = GetComponent<AudioSource>();
-        UpdateLifeText();
     }
 
     void Update() 
@@ -34,7 +33,8 @@ public class CollisionHandler : MonoBehaviour
     // Cheat code method to load next level pressing L button
     // and pressing C button to turn off collision = GodMode
     void RespondToDebugKeys()
-    {
+    {   
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             LoadNextLevel();
@@ -59,24 +59,42 @@ public class CollisionHandler : MonoBehaviour
                 break;
            case "Finish":
                 StartSuccessSequence();
+                coinScript.UpdateCoinsAmount();
                 break;
             case "Fuel":
                 Debug.Log("This thing is fuel");
                 break;
             default:
-                life -= 50;
-                UpdateLifeText();
-
-                if (life == 0){
-                        StartCrashSequence();
-                        // Invoke("DisableGameObject", objectDestroyDeley);   
-                    }
+                HeartLoss();
+                FuelLoss();
                 break;
         }
     }
 
+    void HeartLoss(){
+        
+        if (healthScript != null)
+        {   
+            healthScript.TakeDamage(1);
 
-    // created a deley method for reloading
+            if(healthScript.maxHealth == 0) 
+            {
+                StartCrashSequence();
+            }            
+        }
+    }
+
+    void FuelLoss(){
+        
+        if (fuelScript != null)
+    {
+        if (fuelScript.fuel <= 0)
+        {
+            StartCrashSequence();
+        }
+    }
+}
+
     void StartCrashSequence()
     {   
         isTransitioning = true;
@@ -108,10 +126,11 @@ public class CollisionHandler : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex ;
         int nextSceneIndex = currentSceneIndex + 1;
+        
 
         // restart the scene to the begining
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
-        {
+        {   
             nextSceneIndex = 0;
         }
 
@@ -123,21 +142,5 @@ public class CollisionHandler : MonoBehaviour
         // Disable the GameObject  
         gameObject.SetActive(false);
 
-    }
-
-    void UpdateLifeText()
-    {
-       if (canvas != null)
-        {
-            // Find the TextMeshPro component in the children of the canvas
-            TextMeshProUGUI lifeTextComponent = canvas.GetComponentInChildren<TextMeshProUGUI>();
-
-            if (lifeTextComponent != null)
-            {
-                // Update the TextMeshPro component with the current life value
-                lifeTextComponent.text = "HP: " + life.ToString();
-            }
-            
-        }
     }
 }

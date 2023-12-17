@@ -10,15 +10,20 @@ public class Movement : MonoBehaviour
     [SerializeField] ParticleSystem mainBoosterParticles;
     [SerializeField] ParticleSystem leftBoosterParticles;
     [SerializeField] ParticleSystem rightBoosterParticles;
-
+    
     Rigidbody rb;
     AudioSource rocketSound;
     AudioSource backgroundMusic;
+    public Fuel fuelScript;
+    private Animator anim;
+    private bool isAnimationPlaying = true;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        anim = GetComponent<Animator>();
 
         rocketSound = GetComponent<AudioSource>();
         backgroundMusic = gameObject.AddComponent<AudioSource>();
@@ -34,8 +39,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessThrust();
-        ProcessRotation();
+        if (fuelScript != null && fuelScript.fuel > 0)
+        {
+            ProcessThrust();
+            ProcessRotation();
+        }
     }
 
     // Method for rocket to fly up and sound for rocket
@@ -43,10 +51,11 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {   
+           isAnimationPlaying = !isAnimationPlaying;
            StartThrusting();
         }
         else
-        {
+        {   
             StopThrusting();
         }
     }
@@ -71,15 +80,18 @@ public class Movement : MonoBehaviour
 
     void StartThrusting()
     {
-         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            if (!rocketSound.isPlaying)
-            {
-                rocketSound.PlayOneShot(mainEngine);
-            }
-            if (!mainBoosterParticles.isPlaying)
-            {
-                mainBoosterParticles.Play();
-            }
+        if (fuelScript != null && fuelScript.fuel > 0)
+    {
+        rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+        if (!rocketSound.isPlaying)
+        {
+            rocketSound.PlayOneShot(mainEngine);
+        }
+        if (!mainBoosterParticles.isPlaying)
+        {
+            mainBoosterParticles.Play();
+        }
+    }
     }
 
      void StopThrusting()
