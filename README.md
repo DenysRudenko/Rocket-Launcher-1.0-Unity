@@ -7,7 +7,7 @@ This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/
 ## Introduction
 **Galactic Rocket Adventure** is a interstellar journey Unity game. Pilot a powerful rocket through a vast galaxy, overcoming dynamic obstacles to reach the ultimate destination - a mesmerizing blue box that marks your triumph.
 
-![website preview](FinalProject//images/main.png)
+![website preview](FinalProject/Assets/images/main.png)
 
 # Table of Contents
 - [1. Who will be interested in playing this game?](#interested)
@@ -27,7 +27,6 @@ This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/
 - [4.Bugs](#bugs)
 - [6. GitHub](#git)
 - [7. Information](#acknowledgement)
-- [8. Future](#future)
 
   
 <a name="interested"></a>
@@ -75,9 +74,9 @@ There is a 3 main prefabs at that moment:
 * Success
 * Engine
 
-![Explosion](FinalProject/images/boom.png)
-![Success](FinalProject/images/success.png)
-![Engine](FinalProject/images/engline.png)
+![Explosion](FinalProject/Assetsimages/boom.png)
+![Success](FinalProject/Assetsimages/success.png)
+![Engine](FinalProject/Assetsimages/engline.png)
 
 
 What did we do?
@@ -96,24 +95,24 @@ There is a 4 main objects at that moment:
 * Landing box
 * Obstacle
 
-![Rocket and Launch box](FinalProject/images/rocketLaunch.png)
-![Landing box](FinalProject/images/landing.png)
-![Obstacle](FinalProject/images/obtacle.png)
+![Rocket and Launch box](FinalProject/Assetsimages/rocketLaunch.png)
+![Landing box](FinalProject/Assetsimages/landing.png)
+![Obstacle](FinalProject/Assetsimages/obtacle.png)
 
 <a name="introduction-page"></a>
 ## Levels
 
 At that moment there is 3 levels.
-![1 Level](FinalProject/images/1level.png)
-![2 Level](FinalProject/images/2level.png)
-![3 Level](FinalProject/images/3level.png)
+![1 Level](FinalProject/Assetsimages/1level.png)
+![2 Level](FinalProject/Assetsimages/2level.png)
+![3 Level](FinalProject/Assetsimages/3level.png)
 
 ### Images
    [Go to the top](#table-of-contents)
 
 * Hearths icons
 
-![Hearths](FinalProject/images/hearts.png)
+![Hearths](FinalProject/Assetsimages/hearts.png)
 
   <a name="gamefeatures"></a>
 
@@ -292,32 +291,3 @@ Game was deployed to GitHub pages in GH-PAGES branch:
 
 * Heart youtube tutorial that helped to implevement the health functionality https://www.youtube.com/watch?v=BLfNP4Sc_iA&t=12s
 
-
-
-<a name="#future"></a>
-# 8. Future
-[Go to the top](#table-of-contents)
-
-### Feul Bar
-* Develop the fuel bar for rocket(timer/button pressing).
-
-### Levels
-* Develop more levels with different difficulty.
-
-### Obstacles
-* Create a movement script for obstacles, so the game will be much harder.
-
-### Fuel Pick Up
-* Create a fuel pick up functionality.
-
-### Lights Feuture
-* Create more lights in level to make level become more nicer.
-
-### Menu
-* Create a menu for game with buttons, such as: "New Game", "Quit Game", "Shop".
-
-### Main Menu Scene
-* Create a menu scene background, would be nice if its gonna be animated.
-
-### Implement Sounds
-* Implement more sounds and create a more immersive audio experience.
