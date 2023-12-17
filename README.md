@@ -2,12 +2,12 @@
 Beta version of the project for TUD
 
 
-This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/Rocket-Launcher-1.0-Unity/).
+This game is designed for TuD as [Beta](https://denysrudenko.github.io/Rocket-Launcher-1.0-Unity/).
 
 ## Introduction
 **Galactic Rocket Adventure** is a interstellar journey Unity game. Pilot a powerful rocket through a vast galaxy, overcoming dynamic obstacles to reach the ultimate destination - a mesmerizing blue box that marks your triumph.
 
-![website preview](FinalProject/Assets/images/main.png)
+![website preview](FinalProject/Assets/images/menu.jpg)
 
 # Table of Contents
 - [1. Who will be interested in playing this game?](#interested)
@@ -65,18 +65,6 @@ The main user Expectations:
 
 In our Unity game, cool space music kicks in the moment your mission begins. 
 
-<a name="particles"></a>
-## 1.5 Prefabs
-  [Go to the top](#table-of-contents)
-
-There is a 3 main prefabs at that moment:
-* Explosion
-* Success
-* Engine
-
-![Explosion](FinalProject/Assetsimages/boom.png)
-![Success](FinalProject/Assetsimages/success.png)
-![Engine](FinalProject/Assetsimages/engline.png)
 
 
 What did we do?
@@ -95,26 +83,36 @@ There is a 4 main objects at that moment:
 * Landing box
 * Obstacle
 
-![Rocket and Launch box](FinalProject/Assetsimages/rocketLaunch.png)
-![Landing box](FinalProject/Assetsimages/landing.png)
-![Obstacle](FinalProject/Assetsimages/obtacle.png)
 
 <a name="introduction-page"></a>
 ## Levels
 
 At that moment there is 3 levels.
-![1 Level](FinalProject/Assetsimages/1level.png)
-![2 Level](FinalProject/Assetsimages/2level.png)
-![3 Level](FinalProject/Assetsimages/3level.png)
+![1 Level](FinalProject/Assets/images/level1.jpg)
+![2 Level](FinalProject/Assets/images/level2.jpg)
+![3 Level](FinalProject/Assets/images/level3.jpg)
 
 ### Images
    [Go to the top](#table-of-contents)
 
 * Hearths icons
 
-![Hearths](FinalProject/Assetsimages/hearts.png)
+![Hearths](FinalProject/Assets/images/hearts.jpg)
 
+* Fuel bar
+
+![fuel bar](FinalProject/Assets/images/fuel.jpg)
+
+* Coin
+
+![fuel bar](FinalProject/Assets/images/coin.jpg)
   <a name="gamefeatures"></a>
+
+* Logo
+
+![logo](FinalProject/Assets/images/rocketlogo.png)
+  <a name="gamefeatures"></a>
+
 
 # 2. Features
   [Go to the top](#table-of-contents)
@@ -184,10 +182,6 @@ In this method we sowing the number of hearts we have. At the start of the scrip
 
 ### Student Work
 
-#### Mario
-
-Created a particle methods for left thrust and right thrust and also included all particles working.
-
 #### Denys
 
 Developed and created all levels, rocket object, obstacles, starting position and finish position etc.
@@ -233,19 +227,20 @@ Your primary mission is to successfully navigate the map, avoiding damage and ul
 
 * [Visual Studio](https://code.visualstudio.com/) was used as code generator. I installed ssh for comfortable work.
 
-
 # 4. Testing
   [Go to the top](#table-of-contents)
 
 # 5. Bugs
  [Go to the top](#table-of-contents)
 
-* Background music starting to play over again at the next stage of the game. Will be fixed in 1.0 Version.
+* When you selecting god mode with "C" button, the fuel bar still counts fuel and its still possible to fail.
 
   ### Solved bugs
 
 * There was a problem with heart images for health indicator, to fix it I rotated 3 images in order to display 3 hearts, and then created a list in C Sharp script.
 * I had a bug with a particle sound, the audio were playing in loop, to fix it I used PlayOneShot(soundExample) and if statement.
+
+* There was a problem with fuel bar images, you should apply it right order to make it work properly.
 
 
 ### Manual Testing
@@ -277,8 +272,9 @@ Launch box  | No hurt to player object, works as expected. | Pass
   [Go to the top](#table-of-contents)
 
 Game was deployed to GitHub pages in GH-PAGES branch:
-- Sharing of mine repository here - https://github.com/DenysRudenko/Unity_Project_Alpha
-- The live link can be found here - (https://denysrudenko.github.io/Unity_Project_Alpha/)
+- Sharing of mine repository here - https://github.com/DenysRudenko/Rocket-Launcher-1.0-Unity
+
+- The live link can be found here - (https://denysrudenko.github.io/Rocket-Launcher-1.0-Unity/)
 
   <a name="info"></a>
 # 7. Information
@@ -291,3 +287,7 @@ Game was deployed to GitHub pages in GH-PAGES branch:
 
 * Heart youtube tutorial that helped to implevement the health functionality https://www.youtube.com/watch?v=BLfNP4Sc_iA&t=12s
 
+
+* Rocket 3d object prefab have been downloaded from unity store https://assetstore.unity.com/packages/3d/vehicles/space/rocket-cartoon-capsule-196997
+
+* Explanation video for fuel bar https://www.youtube.com/watch?v=ZzkIn41DFFo&t=303s&ab_channel=HypedCloud
