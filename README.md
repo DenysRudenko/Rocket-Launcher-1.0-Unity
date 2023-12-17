@@ -7,7 +7,7 @@ This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/
 ## Introduction
 **Galactic Rocket Adventure** is a interstellar journey Unity game. Pilot a powerful rocket through a vast galaxy, overcoming dynamic obstacles to reach the ultimate destination - a mesmerizing blue box that marks your triumph.
 
-![website preview](AlphaProject/images/main.png)
+![website preview](FinalProject//images/main.png)
 
 # Table of Contents
 - [1. Who will be interested in playing this game?](#interested)
@@ -75,9 +75,9 @@ There is a 3 main prefabs at that moment:
 * Success
 * Engine
 
-![Explosion](AlphaProject/images/boom.png)
-![Success](AlphaProject/images/success.png)
-![Engine](AlphaProject/images/engline.png)
+![Explosion](FinalProject/images/boom.png)
+![Success](FinalProject/images/success.png)
+![Engine](FinalProject/images/engline.png)
 
 
 What did we do?
@@ -96,24 +96,24 @@ There is a 4 main objects at that moment:
 * Landing box
 * Obstacle
 
-![Rocket and Launch box](AlphaProject/images/rocketLaunch.png)
-![Landing box](AlphaProject/images/landing.png)
-![Obstacle](AlphaProject/images/obtacle.png)
+![Rocket and Launch box](FinalProject/images/rocketLaunch.png)
+![Landing box](FinalProject/images/landing.png)
+![Obstacle](FinalProject/images/obtacle.png)
 
 <a name="introduction-page"></a>
 ## Levels
 
 At that moment there is 3 levels.
-![1 Level](AlphaProject/images/1level.png)
-![2 Level](AlphaProject/images/2level.png)
-![3 Level](AlphaProject/images/3level.png)
+![1 Level](FinalProject/images/1level.png)
+![2 Level](FinalProject/images/2level.png)
+![3 Level](FinalProject/images/3level.png)
 
 ### Images
    [Go to the top](#table-of-contents)
 
 * Hearths icons
 
-![Hearths](AlphaProject/images/hearts.png)
+![Hearths](FinalProject/images/hearts.png)
 
   <a name="gamefeatures"></a>
 
