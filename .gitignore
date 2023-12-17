@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+Assets/Real Stars Skybox/
 node_modules
 package-lock.json
 package.json
