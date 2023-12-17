@@ -1,8 +1,8 @@
-# Unity_Project_Alpha
-Alpha version of the project for TUD
+# Beta_Project_Alpha
+Beta version of the project for TUD
 
 
-This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/Unity_Project_Alpha/).
+This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/Rocket-Launcher-1.0-Unity/).
 
 ## Introduction
 **Galactic Rocket Adventure** is a interstellar journey Unity game. Pilot a powerful rocket through a vast galaxy, overcoming dynamic obstacles to reach the ultimate destination - a mesmerizing blue box that marks your triumph.

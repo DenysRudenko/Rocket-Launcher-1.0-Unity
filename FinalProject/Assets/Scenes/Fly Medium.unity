@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.040312715, g: 0.034521528, b: 0.034044765, a: 1}
+  m_IndirectSpecularColor: {r: 0.07257853, g: 0.064877436, b: 0.06282912, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3574,6 +3574,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelBar
+      value: 
+      objectReference: {fileID: 1230978954}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1779916148}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1548965586}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 827608066}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 412258414}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 937439820}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 962237966}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1676234976}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 751853989}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1888470908}
+    - target: {fileID: 4146090859127435407, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: fuelPoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 1357992734}
+    - target: {fileID: 5326976033929761612, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5357272087694485583, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: m_Name
       value: Rocket
